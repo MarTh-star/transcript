@@ -2,3 +2,63 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.container {
+    position: relative;
+    height: 100%;
+    background: #eee;
+  }
+
+.sidenav{
+    width:200px;
+    list-style-type: none;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.sidenav li{
+    padding: 10px;
+    text-align: center;
+}
+
+.sidenav li:hover{
+    background-color: rgb(230, 230, 230);
+    transition: all 200ms ease-in;
+    color: black;
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #424242;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus {
+    color: #006370;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #424242;
+    background: #424242;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
