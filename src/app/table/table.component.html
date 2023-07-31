@@ -1,11 +1,21 @@
 <div style="margin-left:10px;white-space: pre-line">
     <table mat-table>
-      <tr *ngFor="let table of tableArray">
-        <td>{{table.transcriptid}}</td>
+      <tr>
+        <th>Transcript ID</th>
+        <th>Company Name</th>
+        <th>EC/ET</th>
+        <th>Fiscal Year</th>
+        <th>Fiscal Quarter</th>
+      </tr>
+      <tr *ngFor="let table of tableArray  | paginate: { itemsPerPage: 15, currentPage: p }">
+        <td> <a routerLink="/transcript">{{table.transcriptid}}</a></td>
         <td>{{table.companyname}}</td>
         <td>{{table.ec_et}}</td>
         <td>{{table.fiscalyear}}</td>
         <td>{{table.fiscalquarter}}</td>
       </tr>
     </table>
+    <div>
+      <pagination-controls class="center" (pageChange)="p = $event"></pagination-controls>
+    </div>
   </div>

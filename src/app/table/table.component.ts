@@ -10,6 +10,7 @@ import { companyInfo } from '../data/companies';
 export class TableComponent implements OnInit {
   title = 'Dashboard';
   tableArray: IDashboardTable[] = [];
+  p: number = 1;
 
   ngOnInit(){
     this.jsonToObject();

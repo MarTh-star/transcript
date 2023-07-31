@@ -13,6 +13,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { TranscriptComponent } from './transcript/transcript.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { TableComponent } from './table/table.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { TableComponent } from './table/table.component';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
+    NgxPaginationModule,
     FontAwesomeModule,
     RouterModule.forRoot([
       {path: '', component: TableComponent},
