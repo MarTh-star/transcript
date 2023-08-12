@@ -1,9 +1,31 @@
-<div style="margin-left:10px;white-space: pre-line">
-    <table mat-table>
-      <tr *ngFor="let tran of transcriptArray ">
-        <td style="font-weight:bold">{{tran.transcriptpersonname}}</td>
-        <td>{{tran.componenttext}}</td>
-      </tr>
-    </table>
-    
-  </div>
+<mat-drawer-container>
+  <mat-drawer mode="side" opened class="side-nav" id="side-nav">
+      <li>Drawer content</li>
+      <li>Content 2</li>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div style="margin-left:10px;white-space: pre-line">
+      <table mat-table>
+        <caption><h4>Presentation</h4></caption>
+        <tr *ngFor="let tran of transcriptArray">
+          <td style="font-weight:bold">
+            {{tran.title}} {{tran.transcriptpersonname}}
+          </td>
+          <td>{{tran.componenttext}}</td>
+        </tr>
+      </table>
+      <table mat-table>
+        <caption><h4>Q&A</h4></caption>
+        <tr *ngFor="let tran of qnaArray; let i = index;"
+        id="{{tran.transcriptcomponenttypeid =='3' ? 'question'+i : ''}}">
+          <td style="font-weight:bold">
+            {{tran.title}} {{tran.transcriptpersonname}}
+          </td>
+          <td [ngClass]= "{'question':tran.transcriptcomponenttypeid =='3'}">
+            {{tran.componenttext}}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

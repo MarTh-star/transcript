@@ -13,12 +13,33 @@ table {
     margin-bottom: 50px;
   } 
 
+  .question {
+    background-color: pink;
+  }
+
   table td {
-    background-color: #fff;
+    /*background-color: #fff;*/
     padding: 10px;
     border-bottom: 1px solid #ccc;
   }
 
   table tr:hover td {
     background-color: #ffedcc;
+  }
+  
+.side-nav{
+  width: 10%;
+}
+
+  .side-nav li{
+    text-align: center;
+    list-style-type: none;
+    width: 100%;
+    padding: 10px;
+    padding-top: 20px;
+  }
+
+  .side-nav li:hover {
+    width: 100%;
+    background-color: rgb(189, 207, 207);
   }

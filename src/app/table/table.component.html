@@ -1,18 +1,16 @@
 <div style="margin-left:10px;white-space: pre-line">
     <table mat-table>
       <tr>
-        <th>Transcript ID</th>
+        <th>Transcript</th>
         <th>Company Name</th>
-        <th>EC/ET</th>
-        <th>Fiscal Year</th>
+        <th>Earnings Call Time</th>
         <th>Fiscal Quarter</th>
       </tr>
       <tr *ngFor="let table of tableArray  | paginate: { itemsPerPage: 15, currentPage: p }">
-        <td> <a routerLink="/transcript">{{table.transcriptid}}</a></td>
+        <td> <a routerLink="/transcript">Full Transcript</a></td>
         <td>{{table.companyname}}</td>
         <td>{{table.ec_et}}</td>
-        <td>{{table.fiscalyear}}</td>
-        <td>{{table.fiscalquarter}}</td>
+        <td>{{table.fiscalyear}} Q{{table.fiscalquarter}}</td>
       </tr>
     </table>
     <div>
