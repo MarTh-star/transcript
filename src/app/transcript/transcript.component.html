@@ -1,11 +1,12 @@
 <mat-drawer-container>
   <mat-drawer mode="side" opened class="side-nav" id="side-nav">
-      <li>Drawer content</li>
-      <li>Content 2</li>
+    <div *ngFor="let question of questionIdArray; let i = index">
+      <a href="transcript/#{{ question}}">Question {{i +1}}</a>
+    </div>
   </mat-drawer>
   <mat-drawer-content>
     <div style="margin-left:10px;white-space: pre-line">
-      <table mat-table>
+      <table mat-table #transcriptTable>
         <caption><h4>Presentation</h4></caption>
         <tr *ngFor="let tran of transcriptArray">
           <td style="font-weight:bold">
@@ -14,9 +15,9 @@
           <td>{{tran.componenttext}}</td>
         </tr>
       </table>
-      <table mat-table>
+      <table mat-table #tranTable>
         <caption><h4>Q&A</h4></caption>
-        <tr *ngFor="let tran of qnaArray; let i = index;"
+        <tr *ngFor="let tran of qnaArray; let i = index;" #row
         id="{{tran.transcriptcomponenttypeid =='3' ? 'question'+i : ''}}">
           <td style="font-weight:bold">
             {{tran.title}} {{tran.transcriptpersonname}}
