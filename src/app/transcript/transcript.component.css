@@ -29,17 +29,22 @@ table {
   
 .side-nav{
   width: 10%;
+  list-style-type: none;
 }
 
   .side-nav a{
     text-align: center;
     list-style-type: none;
     width: 100%;
-    padding: 10px;
-    padding-top: 20px;
+    /*padding: 10px;*/
+    color: black;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
   }
 
   .side-nav a:hover {
     width: 100%;
-    background-color: rgb(189, 207, 207);
+    color: rgb(189, 207, 207);
   }

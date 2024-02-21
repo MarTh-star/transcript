@@ -13,19 +13,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     list-style-type: none;
     font-size: 18px;
     padding-top: 10px;
+    text-decoration: none;
 }
 
 .sidenav li{
     padding: 10px;
     text-align: center;
+    color: black;
+    list-style-type: none;
 }
 
-.sidenav li:hover{
+/*sidenav li:hover{
     background-color: rgb(230, 230, 230);
     transition: all 200ms ease-in;
     color: black;
     cursor: pointer;
-}
+}*/
 
 .search {
     display: flex;
